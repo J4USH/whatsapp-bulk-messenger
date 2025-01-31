@@ -45,7 +45,8 @@ print(style.RESET)
 f = open("message.txt", "r", encoding="utf8")
 message = f.read()
 f.close()
-image_path='<Enter the absolute path>\whatsapp-bulk-messenger\RickRoll.jpeg'
+image_path1='E:/Python Code/whatsapp-bulk-messenger/binapani-2025.jpeg'
+image_path2='E:/Python Code/whatsapp-bulk-messenger/binapani-beng-2025.jpeg'
 
 print(style.YELLOW + '\nThis is your message-')
 print(style.GREEN + message)
@@ -94,8 +95,9 @@ for idx, number in enumerate(numbers):
 					attachment_btn.click()
 					sleep(1)
 					image_input = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//input[@accept='image/*,video/mp4,video/3gpp,video/quicktime']")))
-					image_input.send_keys(image_path)
+					image_input.send_keys(f"{image_path1}\n{image_path2}")
 					sleep(3)
+					
 					send_btn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span[data-icon='send']")))
 					send_btn.click()
         
